@@ -1,0 +1,54 @@
+
+#registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: 2px solid #4c78dd;
+}
+
+button {
+    padding: 12px;
+    background-color: #4c78dd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #315ebd;
+}
+
+#error-message {
+    min-height: 20px;
+    color: #c62828;
+    font-size: 14px;
+}
+
+#users-list {
+    list-style: none;
+    padding: 0;
+}
+
+#users-list li {
+    padding: 12px;
+    margin-bottom: 8px;
+    background-color: #f3f5f9;
+    border-radius: 8px;
+}
