@@ -1,4 +1,3 @@
-
 #registration-form {
     display: flex;
     flex-direction: column;
@@ -12,7 +11,7 @@ label {
 input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
 }
@@ -36,11 +35,11 @@ button:hover {
 }
 
 #error-message {
+    color: red;
     min-height: 20px;
-    color: #c62828;
-    font-size: 14px;
 }
 
+/* Список пользователей */
 #users-list {
     list-style: none;
     padding: 0;
@@ -51,4 +50,52 @@ button:hover {
     margin-bottom: 8px;
     background-color: #f3f5f9;
     border-radius: 8px;
+
+    /* НОВОЕ: имя слева, кнопка справа */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+/* НОВОЕ: счётчик пользователей */
+#user-count {
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
+
+/* НОВОЕ: блок фильтрации */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* НОВОЕ: кнопки фильтрации */
+.filter-button {
+    flex: 1;
+    background-color: #e5e7eb;
+    color: #333;
+}
+
+.filter-button:hover {
+    background-color: #d1d5db;
+}
+
+.filter-button.active {
+    background-color: #4c78dd;
+    color: white;
+}
+
+/* НОВОЕ: кнопка удаления */
+.delete-button {
+    background-color: #dc3545;
+    padding: 8px 12px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.delete-button:hover {
+    background-color: #b02a37;
 }

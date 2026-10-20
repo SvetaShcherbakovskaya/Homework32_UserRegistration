@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>User Registration</title>
+
+  <!-- Подключаем CSS -->
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/form.css">
+
+  <!-- Подключаем JavaScript -->
   <script src="js/user.js" defer></script>
   <script src="js/userManager.js" defer></script>
   <script src="js/app.js" defer></script>
@@ -15,32 +17,51 @@
 
 <body>
 <main class="container">
-
   <h1>User Registration</h1>
+
   <!-- Форма регистрации -->
-  <form id="registration-form">
-    <label for="name"> Name </label>
+  <form id="registration-form" novalidate>
+    <label for="name">Name</label>
     <input
             type="text"
             id="name"
             placeholder="Name">
-
-    <label for="age"> Age </label>
+    <label for="age">Age</label>
     <input
             type="number"
             id="age"
-            placeholder="Age">
-
+            placeholder="Age"
+            step="any">
     <button type="submit">Register</button>
   </form>
+
   <!-- Сообщение об ошибке -->
   <p id="error-message" role="alert"></p>
+  <h2>Registered Users</h2>
+
+  <!-- НОВОЕ: счётчик пользователей -->
+  <p id="user-count">Total users: 0</p>
+
+  <!-- НОВОЕ: кнопки фильтрации -->
+  <div class="filters">
+    <button
+            type="button"
+            id="show-all"
+            class="filter-button active">
+      Show All
+    </button>
+
+    <button
+            type="button"
+            id="show-adults"
+            class="filter-button">
+      Show Adults
+    </button>
+  </div>
 
   <!-- Список пользователей -->
-  <h2>Registered Users</h2>
   <ul id="users-list"></ul>
 
 </main>
-
 </body>
 </html>
